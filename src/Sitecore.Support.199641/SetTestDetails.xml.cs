@@ -259,7 +259,22 @@ namespace Sitecore.ContentTesting.Shell.Applications.Dialogs
         {
             var id = ID.NewID;
             var variation = new VariableValueItemStub(id, Translate.Text(NewVariationDefaultName));
-            var values = VariableValues;
+
+      #region Added code 199461
+
+      if (Rendering != null &&
+          Rendering.Datasource != ContextItemUri.ItemID.ToString() &&
+          !string.IsNullOrEmpty(Rendering.Datasource))
+      {
+        variation.Datasource = Rendering.Datasource;
+      }
+      else
+      {
+        variation.Datasource = ContextItemUri.ItemID.ToString();
+      }
+
+      #endregion
+      var values = VariableValues;
             values.Insert(0, variation);
             VariableValues = values;
             var html = RenderVariableValue(variation);
