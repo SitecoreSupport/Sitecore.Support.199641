@@ -29,7 +29,7 @@ using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.Sheer;
 
-namespace Sitecore.ContentTesting.Shell.Applications.Dialogs
+namespace Sitecore.Support.ContentTesting.Shell.Applications.Dialogs
 {
     /// <summary>The set test details form.</summary>
     public class SetTestDetailsForm : DialogForm
