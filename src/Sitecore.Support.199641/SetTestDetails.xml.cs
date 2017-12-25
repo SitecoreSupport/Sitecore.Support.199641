@@ -28,6 +28,7 @@ using Sitecore.Web.UI;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.Sheer;
+using Sitecore.ContentTesting;
 
 namespace Sitecore.Support.ContentTesting.Shell.Applications.Dialogs
 {
@@ -262,8 +263,7 @@ namespace Sitecore.Support.ContentTesting.Shell.Applications.Dialogs
 
       #region Added code 199461
 
-      if (Rendering != null &&
-          Rendering.Datasource != ContextItemUri.ItemID.ToString() &&
+      if (Rendering != null && Rendering.Datasource != ContextItemUri.ItemID.ToString() &&
           !string.IsNullOrEmpty(Rendering.Datasource))
       {
         variation.Datasource = Rendering.Datasource;
